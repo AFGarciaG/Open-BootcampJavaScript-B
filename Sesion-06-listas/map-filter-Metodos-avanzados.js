@@ -1,0 +1,55 @@
+// trabajar con metodos mas avanzados
+// .map() .filter() .reduce()
+
+const array =  ['madrid', 'barcelona', 'alicante', 'bilbao', 'valencia']
+
+const val = array.forEach(v => {        
+    console.log(v)
+    return 4
+});
+
+console.log(val);
+
+const newArray = array.map ((valor, indice) =>  `${indice + 1} - ${valor}`)
+console.log(newArray);
+
+
+const listaObjetos = [
+    {nombre: 'andres', edad: 23},
+    {nombre: 'suarez', edad: 37},
+    {nombre: 'miguel', edad: 63},
+    {nombre: 'andres', edad: 23},
+    {nombre: 'amalia', edad: 4},
+]
+
+// const personasMayores =  listaObjetos.filter(obj =>{
+//     if (obj.edad > 30){
+//         return true
+//     }else{
+//         return false
+//     }
+// })
+// console.log(personasMayores);
+
+const personasMayores = listaObjetos.filter(obj => obj.edad > 30)
+console.log(personasMayores);
+
+const nuevaLista = listaObjetos.filter(obj => obj.nombre !== 'miguel')
+console.log(nuevaLista);
+
+const valores = [3, 56, 23, 5, 90, 100]
+
+const suma = valores.reduce((acumulado, cur, i, arrayoriginal) =>{
+    console.log(acumulado);
+    console.log(cur);
+    console.log(i);
+    console.log(arrayoriginal);
+    return acumulado + cur
+})
+
+console.log(suma)
+
+
+
+
+
