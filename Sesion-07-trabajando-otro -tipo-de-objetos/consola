@@ -1,0 +1,15 @@
+about.blank
+
+console>
+
+
+>prompt("Cual es tu edad")
+< 34
+>const edad = prompt("¿cual es tu edad?")
+<undefined
+>edad
+<'52'
+>const num_edad = Number(edad)
+<undefined
+>num_edad
+<52
